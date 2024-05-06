@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'lottie-ios'
-  s.version          = '3.1.8'
+  s.version          = '3.1.8-privacy'
   s.summary          = 'A library to render native animations from bodymovin json. Now in Swift!'
 
   s.description = <<-DESC
@@ -20,7 +20,7 @@ For the first time, designers can create and ship beautiful animations without a
   s.homepage         = 'https://github.com/airbnb/lottie-ios'
   s.license          = { :type => 'Apache', :file => 'LICENSE' }
   s.author           = { 'Brandon Withrow' => 'buba447@gmail.com' }
-  s.source           = { :git => 'https://github.com/airbnb/lottie-ios.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dearwayne/lottie-ios.git', :tag => s.version }
 
   s.swift_version = '5.0'
   s.ios.deployment_target = '9.0'
@@ -38,4 +38,8 @@ For the first time, designers can create and ship beautiful animations without a
   s.osx.frameworks = ['AppKit', 'CoreGraphics', 'QuartzCore']
   s.module_name = 'Lottie'
   s.header_dir = 'Lottie'
+
+  s.resource_bundles = {
+    'LottiePrivacyInfo' => ['Sources/PrivacyInfo.xcprivacy']
+  }
 end
